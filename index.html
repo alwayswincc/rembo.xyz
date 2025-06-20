@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rembo Bio Editor Ultimate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="editor">
+    <h1>WIP CHAT</h1>
+    <input type="text" id="username" placeholder="Username (Required)">
+    <input type="text" id="name" placeholder="Display Name">
+    <input type="text" id="location" placeholder="Location">
+    <input type="text" id="website" placeholder="Website URL">
+    <input type="text" id="status" placeholder="Status">
+    <input type="text" id="discord" placeholder="Discord (e.g. user#1234)">
+    <input type="text" id="github" placeholder="GitHub Username">
+    <input type="text" id="twitter" placeholder="Twitter Handle">
+    <label for="pfpUpload">Profile Picture:</label>
+    <input type="file" id="pfpUpload" />
+    <textarea id="bio" placeholder="Your bio... supports markdown and emojis 😎🔥"></textarea>
+
+    <label>Font:</label>
+    <select id="font">
+      <option value="sans-serif">Sans</option>
+      <option value="serif">Serif</option>
+      <option value="monospace">Monospace</option>
+    </select>
+
+    <label>Font Size:</label>
+    <input type="number" id="fontsize" value="16" min="10" max="40">
+
+    <label>Background Color:</label>
+    <input type="color" id="bgcolor" value="#ffffff">
+
+    <label>Theme:</label>
+    <select id="theme">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="neon">Neon</option>
+    </select>
+
+    <button onclick="saveBio()">💾 Save Bio</button>
+
+    <h3>Live Preview:</h3>
+    <div id="preview"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
